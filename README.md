@@ -99,14 +99,29 @@ O sistema opera em um **Loop de Controle (Lê, Avalia, Atua, Envia)**, garantind
 * **Alertas Sonoros:** Buzzer com diferentes intensidades conforme a gravidade do risco.
 
 * **Context Management:** Atualização contínua do estado no Orion Context Broker, permitindo atuação remota através da nuvem.
+---
 
-## 🏛️ 2. Arquitetura e Fluxo de Dados (FIWARE Context Management)
+## 🏗️ 2. Arquitetura e Fluxo de Dados (FIWARE Context Management)
 
-A arquitetura segue o padrão **Smart Solution** da plataforma FIWARE, utilizando o Context Broker como o principal ponto de gestão e persistência do estado do ambiente.
+A arquitetura do projeto está fundamentada no padrão **Smart Solution** da plataforma FIWARE, que permite a gestão eficiente de entidades de contexto. O coração do sistema é o **Context Broker (Orion)**, que atua como o principal ponto de gestão, persistência e distribuição do estado em tempo real do ambiente.
 
-  <img width="677" height="650" alt="image" src="https://github.com/user-attachments/assets/3015bdfc-53a5-4ff4-af6c-14f0b69fb647" />
+### ⚡ Fluxo de Dados e Camadas
 
+O design da solução é modular e se baseia em três camadas de processamento, focadas na separação de responsabilidades:
 
+1.  **Ingestão de Dados:** Dispositivos IoT (como o ESP32) capturam dados e os enviam para a plataforma.
+2.  **Gestão de Contexto:** O **Context Broker** (Orion) persiste e disponibiliza o estado mais recente de todas as entidades do projeto.
+3.  **Consumo de Contexto:** Aplicações de visualização (Dashboard) e serviços externos consomem o contexto atualizado para análise e tomada de decisão.
+
+### 🖼️ Diagrama de Arquitetura
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3015bdfc-53a5-4ff4-af6c-14f0b69fb647" alt="Diagrama de Arquitetura FIWARE Context Management" width="700"/>
+  <br>
+  <em>Figura 4: Diagrama de Arquitetura e Fluxo de Dados do Projeto, seguindo o padrão FIWARE.</em>
+</p>
+
+---
 
 ### Stack Tecnológico Principal
 
@@ -343,54 +358,103 @@ sudo systemctl start fiware-dashboard.service
 
 ---
 
-## 🖼️ Mídias do Projeto
+## ✨ Mídias e Visualizações do Projeto
 
-* 📌 Dashboard  <img width="1907" height="909" alt="image" src="https://github.com/user-attachments/assets/ded69311-ce1b-45d0-9814-43fd14ebd0bb" />
-
-* 📌 Hardware ESP32  <img width="413" height="365" alt="image" src="https://github.com/user-attachments/assets/b8e36892-a6fb-4d47-99bd-9af76913eec8" />
-
-* 📌 Postman  <img width="1916" height="862" alt="image" src="https://github.com/user-attachments/assets/c6ba3cf0-06e6-4321-a036-feb0fcd87646" />
-
+Para proporcionar uma visão completa da solução, apresentamos as principais mídias do projeto, incluindo o painel de controle, o hardware e a interface de teste da API.
 
 ---
 
-## 🌟 Conclusão
+### 📊 Dashboard de Monitoramento
 
-O projeto **Bem-Estar no Trabalho** demonstra como a tecnologia IoT combinada com o ecossistema FIWARE pode criar ambientes profissionais seguros, inteligentes e eficientes.
-A solução:
+O Dashboard é a interface principal para visualização dos dados em tempo real, fornecendo métricas e indicadores de performance.
 
-* Monitora variáveis ambientais essenciais
-* Atua automaticamente em situações de risco
-* Registra histórico para auditoria e análise
-* Exibe tudo em um dashboard moderno
-* É modular, escalável e altamente aplicável
+| Componente | Detalhe Principal |
+| :--- | :--- |
+| **Imagem** | **[Imagem do Dashboard]** |
+| **Descrição** | Painel principal com gráficos e dados de monitoramento de performance. |
 
-Ideal para empresas, escritórios, laboratórios, salas técnicas e ambientes que exigem controle ambiental.
-
----
-
-## 👨‍💻 Desenvolvido por:
-
-* Rafael Augusto Carmona – RM 563758
-* Eduardo Tolentino – RM 562169
-* Enzo Hort Ramos – RM 561872
-
-## 👨‍🏫 Professor
-
-* Fábio Enrique Cabrini
-
-## 🏫 Curso
-
-* Engenharia de Software – FIAP
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ded69311-ce1b-45d0-9814-43fd14ebd0bb" alt="Dashboard do Projeto" width="800"/>
+  <br>
+  <em>Figura 1: Visão geral do Dashboard de monitoramento.</em>
+</p>
 
 ---
 
-## 🔗 Links Importantes
-**vídeo no youtube:**
+### ⚙️ Hardware (ESP32)
 
-**Simulação Wokwi:**
-`https://wokwi.com/projects/44727608930033152`
+Detalhe do hardware utilizado para coleta e transmissão de dados.
 
-**Collection Postman:**
-`https://rafinhaacarmona-8827768.postman.co/workspace/Rafael-carmona's-Workspace~1d0e5f81-4f93-4496-8336-903a367dee49/collection/47624777-4f5b3c33-01f5-4b55-b80c-8330052301b0?action=share&source=copy-link&creator=47624777`
+| Componente | Detalhe Principal |
+| :--- | :--- |
+| **Imagem** | **[Imagem do Hardware ESP32]** |
+| **Descrição** | Módulo ESP32, responsável pela aquisição de dados e conectividade. |
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b8e36892-a6fb-4d47-99bd-9af76913eec8" alt="Hardware ESP32" width="400"/>
+  <br>
+  <em>Figura 2: Detalhe do Módulo ESP32 em operação.</em>
+</p>
+
+---
+
+### 📬 Teste de API (Postman)
+
+Captura de tela demonstrando o teste de um endpoint da API.
+
+| Componente | Detalhe Principal |
+| :--- | :--- |
+| **Imagem** | **[Imagem do Postman]** |
+| **Descrição** | Requisição de teste via Postman, evidenciando a resposta e estrutura da API. |
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c6ba3cf0-06e6-4321-a036-feb0fcd87646" alt="Postman" width="800"/>
+  <br>
+  <em>Figura 3: Requisição de teste de API através do Postman.</em>
+</p>
+
+---
+---
+
+## ✅ Conclusão e Futuras Aplicações
+
+O projeto **Bem-Estar no Trabalho** é uma prova de conceito de como a tecnologia IoT e o ecossistema FIWARE podem ser integrados para criar ambientes de trabalho seguros, inteligentes e eficientes, focados na saúde e produtividade dos colaboradores.
+
+### 🎯 Benefícios Chave da Solução
+
+* **Monitoramento Integral:** Acompanhamento de variáveis ambientais críticas (temperatura, umidade, gases, etc.) em tempo real.
+* **Ação Proativa:** Capacidade de atuação automática em situações que configurem risco (Ex: alertas ou acionamento de exaustores).
+* **Compliance e Auditoria:** Registro histórico completo dos dados para fins de análise, relatórios e auditoria de segurança.
+* **Interface Amigável:** Visualização de todos os dados e alertas em um dashboard moderno e intuitivo.
+* **Flexibilidade:** Arquitetura modular, escalável e de alta aplicabilidade em diversos tipos de ambientes.
+
+> **Ideal para:** Empresas, escritórios, laboratórios, salas técnicas e quaisquer ambientes que demandem controle ambiental rigoroso e garantia de bem-estar.
+
+---
+
+## 👨‍💻 Equipe de Desenvolvimento
+
+Agradecemos a todos os envolvidos na concepção e execução deste projeto.
+
+| Função | Membro | RM |
+| :--- | :--- | :--- |
+| Desenvolvedor | **Rafael Augusto Carmona** | 563758 |
+| Desenvolvedor | **Eduardo Tolentino** | 562169 |
+| Desenvolvedor | **Enzo Hort Ramos** | 561872 |
+
+### 📚 Orientação Acadêmica
+
+* **Professor Orientador:** Fábio Enrique Cabrini
+* **Curso:** Engenharia de Software – FIAP
+
+---
+
+## 🔗 Recursos e Links Importantes
+
+Acesse os artefatos do projeto através dos links abaixo:
+
+* **🎬 Vídeo Demonstrativo (YouTube):** [Inserir link do YouTube aqui]
+* **💻 Simulação Wokwi:** <https://wokwi.com/projects/44727608930033152>
+* **📮 Collection Postman:** [Acessar Coleção Postman](https://rafinhaacarmona-8827768.postman.co/workspace/Rafael-carmona's-Workspace~1d0e5f81-4f93-4496-8336-903a367dee49/collection/47624777-4f5b3c33-01f5-4b55-b80c-8330052301b0?action=share&source=copy-link&creator=47624777)
+
+---
