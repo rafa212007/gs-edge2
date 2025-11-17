@@ -104,7 +104,8 @@ O sistema opera em um **Loop de Controle (Lê, Avalia, Atua, Envia)**, garantind
 
 A arquitetura segue o padrão **Smart Solution** da plataforma FIWARE, utilizando o Context Broker como o principal ponto de gestão e persistência do estado do ambiente.
 
- <img width="686" height="649" alt="Captura de tela 2025-11-17 004848" src="https://github.com/user-attachments/assets/bfad40b3-701c-4ae9-be65-a082a7dcb8f8" />
+  <img width="677" height="650" alt="image" src="https://github.com/user-attachments/assets/3015bdfc-53a5-4ff4-af6c-14f0b69fb647" />
+
 
 
 ### Stack Tecnológico Principal
