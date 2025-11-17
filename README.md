@@ -382,7 +382,7 @@ Ideal para empresas, escritórios, laboratórios, salas técnicas e ambientes qu
 **vídeo no youtube:**
 
 **Simulação Wokwi:**
-https://wokwi.com/projects/447276089300331521``
+`https://wokwi.com/projects/44727608930033152`
 
 **Collection Postman:**
 `https://rafinhaacarmona-8827768.postman.co/workspace/Rafael-carmona's-Workspace~1d0e5f81-4f93-4496-8336-903a367dee49/collection/47624777-4f5b3c33-01f5-4b55-b80c-8330052301b0?action=share&source=copy-link&creator=47624777`
