@@ -104,6 +104,9 @@ O sistema opera em um **Loop de Controle (Lê, Avalia, Atua, Envia)**, garantind
 
 A arquitetura segue o padrão **Smart Solution** da plataforma FIWARE, utilizando o Context Broker como o principal ponto de gestão e persistência do estado do ambiente.
 
+ <img width="686" height="649" alt="Captura de tela 2025-11-17 004848" src="https://github.com/user-attachments/assets/bfad40b3-701c-4ae9-be65-a082a7dcb8f8" />
+
+
 ### Stack Tecnológico Principal
 
 | Componente | Função Primária | Tecnologia Principal | 
@@ -341,9 +344,12 @@ sudo systemctl start fiware-dashboard.service
 
 ## 🖼️ Mídias do Projeto
 
-* 📌 Dashboard
-* 📌 Hardware ESP32
-* 📌 Postman
+* 📌 Dashboard  <img width="1907" height="909" alt="image" src="https://github.com/user-attachments/assets/ded69311-ce1b-45d0-9814-43fd14ebd0bb" />
+
+* 📌 Hardware ESP32  <img width="413" height="365" alt="image" src="https://github.com/user-attachments/assets/b8e36892-a6fb-4d47-99bd-9af76913eec8" />
+
+* 📌 Postman  <img width="1916" height="862" alt="image" src="https://github.com/user-attachments/assets/c6ba3cf0-06e6-4321-a036-feb0fcd87646" />
+
 
 ---
 
